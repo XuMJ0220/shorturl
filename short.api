@@ -1,0 +1,24 @@
+type ConvertRequest {
+	LongUrl string `json:"long_url" validate:"required"`
+}
+
+type ConvertResponse {
+	ShortUrl string `json:"short_url"`
+}
+
+type ShowRequest {
+	ShortUrl string `path:"shortUrl"`
+}
+
+type ShowResponse {
+	LongUrl string `json:"long_url"`
+}
+
+service shortener-api {
+	@handler ConvertHandler
+	post /convert (ConvertRequest) returns (ConvertResponse)
+
+	@handler ShowHandler
+	post /:shortUrl (ShowRequest) returns (ShowResponse)
+}
+
