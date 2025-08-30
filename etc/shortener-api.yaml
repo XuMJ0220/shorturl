@@ -8,6 +8,11 @@ ShortUrlMapMysql:
 Sequence: 
   DSN: user1:112233@tcp(192.168.192.1:3307)/short_url?charset=utf8mb4&parseTime=true
 
+CacheRedis:
+  - Host: 192.168.192.1:6380
+    Pass: ""
+    Type: node
+
 Base62CharacterSet: cfklmnoab67pqrstuEFvwx58yzWXYdeZ0ABP34QCDGHghijIJKLMNORSTUV129 
 
 BlackList:

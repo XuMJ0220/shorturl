@@ -1,6 +1,9 @@
 package config
 
-import "github.com/zeromicro/go-zero/rest"
+import (
+	"github.com/zeromicro/go-zero/core/stores/cache"
+	"github.com/zeromicro/go-zero/rest"
+)
 
 type Config struct {
 	rest.RestConf
@@ -12,6 +15,8 @@ type Config struct {
 	Sequence struct {
 		DSN string
 	}
+
+	CacheRedis cache.CacheConf
 
 	Base62CharacterSet string
 
