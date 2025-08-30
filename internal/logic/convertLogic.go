@@ -34,6 +34,7 @@ func NewConvertLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ConvertLo
 		svcCtx: svcCtx,
 	}
 }
+ 
 
 // Convert 转链业务逻辑：输入一个长链接->转为短链接
 func (l *ConvertLogic) Convert(req *types.ConvertRequest) (resp *types.ConvertResponse, err error) {
